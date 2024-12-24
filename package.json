@@ -1,0 +1,23 @@
+{
+  "name": "wpstarter",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "wp-scripts start src/js/index.js ",
+    "build": "wp-scripts build src/js/index.js ",
+    "develop": "npm-run-all --parallel compile sync",
+    "sync": "browser-sync start --proxy 'localurlhere.local' --files 'build/*'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@wordpress/scripts": "^30.7.0",
+    "browser-sync": "^3.0.3",
+    "glob": "^11.0.0",
+    "npm-run-all": "^4.1.5",
+    "tailwindcss": "^3.4.17"
+  }
+}

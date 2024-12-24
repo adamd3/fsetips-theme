@@ -1,0 +1,62 @@
+# WordPress core
+wp-admin/
+wp-includes/
+wp-*.php
+index.php
+xmlrpc.php
+license.txt
+readme.html
+
+# Configuration
+wp-config.php
+wp-config-sample.php
+
+
+# Ignore everything in wp-content
+wp-content/*
+
+# Track specific directories
+!wp-content/themes/
+!wp-content/plugins/
+
+# But ignore everything in them
+wp-content/themes/*
+wp-content/plugins/*
+
+# ...except custom work
+!wp-content/themes/wpstarter/
+!wp-content/plugins/your-plugin/
+
+# Ignore the build directory
+wp-content/themes/wpstarter/build/
+
+# Caching
+wp-content/cache/
+wp-content/advanced-cache.php
+wp-content/wp-cache-config.php
+
+# macOS system files
+.DS_Store
+
+# Editor files
+.vscode/
+.idea/
+
+# Node modules if using npm
+node_modules/
+
+# Composer vendor directory if using PHP dependencies
+vendor/
+
+# DDEV
+.ddev/*
+!.ddev/config.yaml
+
+# Logs and databases
+*.log
+*.sql
+*.sqlite
+
+# Environment files
+.env
+.env.*
