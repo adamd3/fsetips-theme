@@ -7,38 +7,351 @@
 /* Utilities Layer */
 @import 'tailwindcss/utilities';
 
+/* Base list styles */
+@layer base {
+  ul {
+    list-style-type: disc;
+  }
 
-/*
- The below CSS is all copied from PathoGeneLit
- TODO: update these styles
-*/
-
-.wp-block-button__link {
-  background-color: lightcoral;
-  color: white;
-  text-transform: uppercase;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: 700;
-  letter-spacing: 0.25em;
-  border-radius: 8px;
-  border: 2px solid lightcoral;
-  transition: all 0.3s ease;
-
-  &:hover {
-    background-color: white;
-    color: lightcoral
+  ol {
+    list-style-type: decimal;
   }
 }
 
-.is-style-secondary-button {
-  .wp-block-button__link {
-    background-color: #0d3b66;
-    border-color: #0d3b66;
-    color: white;
+/* Mobile responsiveness */
+@layer base {
 
-    &:hover {
-      background-color: white;
-      color: #0d3b66;
+  /* Remove all group padding on mobile */
+  .wp-block-group {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* Add padding to content areas */
+  .wp-block-group.is-layout-constrained>* {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  /* Keep full-width backgrounds */
+  .hero-section,
+  .featured-content,
+  .about-section {
+    padding: 0;
+  }
+
+  /* Desktop styles */
+  @media (min-width: 768px) {
+    .wp-block-group {
+      padding-left: 0rem;
+      padding-right: 0rem;
     }
+
+    .hero-section,
+    .featured-content,
+    .about-section {
+      padding-left: 0rem;
+      padding-right: 0rem;
+    }
+  }
+}
+
+
+/* Header and Navigation */
+.site-header {
+  @apply px-4 md:px-8;
+}
+
+.site-header .wp-block-site-logo {
+  @apply w-40 md:w-auto;
+}
+
+/* Desktop Navigation */
+.site-header .desktop-nav {
+  @apply hidden md:flex;
+}
+
+/* Mobile Navigation */
+.site-header .mobile-nav {
+  @apply hidden absolute left-0 right-0 top-full z-50 bg-dark p-4;
+}
+
+.site-header .mobile-nav.is-active {
+  @apply block;
+}
+
+.site-header .mobile-nav .wp-block-navigation__container {
+  @apply flex flex-col gap-4;
+}
+
+.site-header .mobile-nav .wp-block-navigation-item__content {
+  @apply text-white block p-2 hover:bg-opacity-10 hover:bg-white rounded;
+}
+
+/* Mobile Menu Trigger */
+.site-header .mobile-nav-trigger {
+  @apply block md:hidden;
+}
+
+.site-header .mobile-nav-trigger .wp-block-button__link {
+  @apply p-2 bg-brand-orange border-0 rounded-md;
+}
+
+/* Hero Section */
+.hero-section {
+  @apply py-8 md:py-12;
+}
+
+.hero-section .wp-block-image {
+  @apply mx-auto max-w-full px-4 md:px-0;
+}
+
+.hero-section .wp-block-image img {
+  @apply mx-auto;
+  max-width: min(90%, 36rem);
+  /* 36rem = max-w-xl equivalent */
+}
+
+.hero-section .hero-title {
+  @apply px-4 text-2xl md:text-5xl md:px-0 mx-auto;
+  line-height: 1.2;
+  max-width: min(100%, 20ch);
+}
+
+/* Ensure the container itself is centered */
+.hero-section .wp-block-heading {
+  @apply mx-auto text-center;
+}
+
+/* Featured Content Section */
+.featured-content {
+  @apply px-4 md:px-8;
+}
+
+.featured-content .wp-block-columns {
+  @apply gap-8 md:gap-12;
+}
+
+/* About Section */
+.about-section {
+  @apply px-4 md:px-8;
+}
+
+.about-section .wp-block-columns {
+  @apply flex-col md:flex-row gap-8;
+}
+
+.about-section .wp-block-image {
+  @apply mt-6 md:mt-0 flex justify-center md:justify-start;
+}
+
+.about-section .wp-block-image img {
+  @apply mx-auto md:mx-0 w-[90%] md:w-auto;
+}
+
+/* Newsletter Signup */
+.wp-block-fsetips-newsletter-signup {
+  @apply mx-4 md:mx-0 max-w-sm md:max-w-md lg:max-w-lg;
+}
+
+.wp-block-fsetips-newsletter-signup form {
+  @apply flex flex-col sm:flex-row gap-3;
+}
+
+.wp-block-fsetips-newsletter-signup input {
+  @apply w-full px-4 py-2 rounded-lg;
+}
+
+.wp-block-fsetips-newsletter-signup button {
+  @apply w-full sm:w-auto px-6 py-2 rounded-lg;
+}
+
+/* Difficulty Badge Styles */
+.tutorial-difficulty {
+  @apply inline-flex px-3 py-1 text-sm font-medium rounded-full;
+}
+
+.tutorial-difficulty[data-term="beginner"] {
+  @apply bg-green-100 text-green-800;
+}
+
+.tutorial-difficulty[data-term="intermediate"] {
+  @apply bg-blue-100 text-blue-800;
+}
+
+.tutorial-difficulty[data-term="advanced"] {
+  @apply bg-purple-100 text-purple-800;
+}
+
+/* Footer */
+.site-footer {
+  @apply px-4 md:px-8;
+}
+
+/* Footer Layout and Ordering */
+.site-footer .wp-block-group.alignwide {
+  @apply flex-col md:flex-row w-full;
+}
+
+.site-footer .wp-block-group.alignwide>.wp-block-group {
+  @apply order-1 md:order-none w-full;
+}
+
+.site-footer .wp-block-columns {
+  @apply order-2 md:order-none flex-col md:flex-row gap-8 md:gap-12 pl-0 md:pl-8 w-full md:w-auto md:min-w-[400px] lg:min-w-[500px];
+}
+
+.site-footer .wp-block-social-links {
+  @apply mb-8 md:mb-0;
+}
+
+/* Ensure the group container takes full width on mobile */
+.site-footer .wp-block-group {
+  @apply w-full md:w-auto;
+}
+
+/* Tutorial and Content Styles */
+.featured-image-tutorial {
+  @apply mb-8;
+}
+
+.featured-image-tutorial img {
+  @apply w-full h-full object-cover object-top;
+  max-height: 250px;
+}
+
+.tutorial-content {
+  @apply mt-0;
+}
+
+/* Snippet Styles */
+.snippet-meta-box .snippet-thumbnail {
+  @apply mb-6;
+}
+
+.snippet-meta-box .snippet-thumbnail img {
+  @apply w-full h-auto object-cover;
+}
+
+.snippet-meta-box h3 {
+  @apply mb-4;
+}
+
+.snippet-meta-box .wp-block-shortcode+p {
+  @apply mt-0 mb-6;
+}
+
+.snippet-meta-box .wp-block-shortcode {
+  @apply m-0;
+}
+
+/* Taxonomy Badge Styles */
+.wp-block-post-terms.taxonomy-snippet-type a {
+  @apply bg-primary text-background;
+}
+
+.wp-block-post-terms.taxonomy-fse-topic a {
+  @apply bg-brand-orange text-background;
+}
+
+/* Archive Grid Layout */
+.wp-block-post-template.is-flex-container,
+.wp-block-post-template.is-flex-container.is-flex-container.columns-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  width: 100%;
+  max-width: none;
+}
+
+@media (min-width: 768px) {
+
+  .wp-block-post-template.is-flex-container,
+  .wp-block-post-template.is-flex-container.is-flex-container.columns-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.archive-card {
+  background: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--wp--preset--color--light);
+  overflow: hidden;
+  transition: box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  height: 700px;
+}
+
+.archive-card:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.archive-card-image {
+  width: 100%;
+  height: 300px;
+  flex-shrink: 0;
+}
+
+.archive-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.archive-card-content {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.archive-card-difficulty {
+  margin-bottom: 1rem;
+}
+
+.archive-card .wp-block-post-title {
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  line-height: 1.3;
+}
+
+.archive-card .wp-block-post-excerpt {
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.archive-card .wp-block-post-excerpt__excerpt {
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin: 0;
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+.archive-card-topics {
+  margin-top: 1.5rem;
+}
+
+.archive-filters {
+  margin-bottom: 3rem;
+  gap: 1.5rem;
+}
+
+/* Small Screen Optimizations */
+@media (max-width: 640px) {
+  .hero-section {
+    @apply text-center;
+  }
+
+  .featured-content .wp-block-columns {
+    @apply mx-0;
+  }
+
+  .featured-image-tutorial img {
+    max-height: 180px;
   }
 }
