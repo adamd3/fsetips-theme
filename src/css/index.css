@@ -149,22 +149,6 @@
   @apply mx-auto md:mx-0 w-[90%] md:w-auto;
 }
 
-/* Newsletter Signup */
-.wp-block-fsetips-newsletter-signup {
-  @apply mx-4 md:mx-0 max-w-sm md:max-w-md lg:max-w-lg;
-}
-
-.wp-block-fsetips-newsletter-signup form {
-  @apply flex flex-col sm:flex-row gap-3;
-}
-
-.wp-block-fsetips-newsletter-signup input {
-  @apply w-full px-4 py-2 rounded-lg;
-}
-
-.wp-block-fsetips-newsletter-signup button {
-  @apply w-full sm:w-auto px-6 py-2 rounded-lg;
-}
 
 /* Difficulty Badge Styles */
 .tutorial-difficulty {
@@ -265,7 +249,6 @@
 }
 
 @media (min-width: 768px) {
-
   .wp-block-post-template.is-flex-container,
   .wp-block-post-template.is-flex-container.is-flex-container.columns-2 {
     grid-template-columns: 1fr 1fr;
@@ -339,6 +322,36 @@
 .archive-filters {
   margin-bottom: 3rem;
   gap: 1.5rem;
+}
+
+/* Contact Form 7 Styles */
+.wpcf7-form {
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 0px;
+}
+
+.wpcf7-form input[type="text"],
+.wpcf7-form input[type="email"],
+.wpcf7-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+
+.wpcf7-submit {
+  background-color: #f97316;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.wpcf7-submit:hover {
+  background-color: #ea580c;
 }
 
 /* Small Screen Optimizations */
