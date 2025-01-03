@@ -1,17 +1,42 @@
-<!-- wp:group {"tagName":"header","style":{"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40"}}},"layout":{"type":"constrained"}} -->
-<header class="wp-block-group"
-	style="padding-top:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40)">
-	<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between","orientation":"horizontal"}} -->
-	<div class="wp-block-group">
-		<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"}} -->
-		<div class="wp-block-group">
-			<!-- wp:site-logo /-->
-			<!-- wp:site-title {"style":{"typography":{"fontStyle":"normal","fontWeight":"500"}}} /-->
-		</div>
-		<!-- /wp:group -->
+<!-- wp:group {"tagName":"header","align":"full","className":"site-header","style":{"spacing":{"padding":{"top":"0.5rem","bottom":"0.5rem"},"margin":{"top":"0","bottom":"0"}},"position":{"type":"sticky","top":"0px"}},"backgroundColor":"dark","layout":{"type":"constrained"}} -->
+<header class="wp-block-group alignfull site-header has-dark-background-color has-background"
+    style="margin-top:0;margin-bottom:0;padding-top:0.5rem;padding-bottom:0.5rem">
+    <!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"0px"}},"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between"}} -->
+    <div class="wp-block-group alignwide">
+        <!-- wp:group {"style":{"spacing":{"blockGap":"0","margin":{"top":"0","bottom":"0"},"padding":{"right":"0","left":"0"}}},"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"left"}} -->
+        <div class="wp-block-group" style="margin-top:0;margin-bottom:0;padding-right:0;padding-left:0">
+            <!-- wp:site-logo {"width":221} /--></div>
+        <!-- /wp:group -->
 
-		<!-- wp:navigation {"layout":{"type":"flex","orientation":"horizontal"},"style":{"spacing":{"blockGap":"var:preset|spacing|40"}}} /-->
-	</div>
-	<!-- /wp:group -->
+        <!-- wp:group {"className":"desktop-nav","layout":{"type":"flex","orientation":"horizontal"}} -->
+        <div class="wp-block-group desktop-nav">
+            <!-- wp:navigation {"ref":50,"style":{"spacing":{"blockGap":"var:preset|spacing|30"}},"layout":{"type":"flex","orientation":"horizontal"}} /-->
+        </div>
+        <!-- /wp:group -->
+
+        <!-- wp:group {"className":"mobile-nav-trigger","layout":{"type":"flex","orientation":"horizontal"}} -->
+        <div class="wp-block-group mobile-nav-trigger"><!-- wp:buttons -->
+            <div class="wp-block-buttons"><!-- wp:button {"className":"mobile-menu-toggle"} -->
+                <div class="wp-block-button mobile-menu-toggle"><a class="wp-block-button__link wp-element-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path class="hamburger" d="M4 6h16M4 12h16M4 18h16" stroke="currentColor"></path>
+                            <path class="close" d="M6 6l12 12M6 18L18 6" stroke="currentColor" style="display: none;">
+                            </path>
+                        </svg>
+                    </a></div>
+                <!-- /wp:button -->
+            </div>
+            <!-- /wp:buttons -->
+        </div>
+        <!-- /wp:group -->
+    </div>
+    <!-- /wp:group -->
+
+    <!-- wp:group {"className":"mobile-nav","layout":{"type":"constrained"}} -->
+    <div class="wp-block-group mobile-nav">
+        <!-- wp:navigation {"ref":50,"overlayMenu":"never","className":"wp-block-navigation","style":{"spacing":{"blockGap":"1rem"}},"layout":{"type":"flex","orientation":"vertical"}} /-->
+    </div>
+    <!-- /wp:group -->
 </header>
 <!-- /wp:group -->
