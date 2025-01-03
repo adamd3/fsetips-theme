@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 32 32"
+   version="1.1"
+   id="svg150"
+   sodipodi:docname="fse-icon-2.svg"
+   inkscape:version="1.2.1 (9c6d41e, 2022-07-14)"
+   inkscape:export-filename="fse-icon-2.webp"
+   inkscape:export-xdpi="1536"
+   inkscape:export-ydpi="1536"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs154" />
+  <sodipodi:namedview
+     id="namedview152"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="7.375"
+     inkscape:cx="1.220339"
+     inkscape:cy="16"
+     inkscape:window-width="1309"
+     inkscape:window-height="456"
+     inkscape:window-x="0"
+     inkscape:window-y="38"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg150" />
+  <!-- Main container -->
+  <rect
+     width="32"
+     height="32"
+     fill="#0f172a"
+     rx="6"
+     id="rect132" />
+  <!-- Stylized blocks forming an 'F' shape -->
+  <g
+     fill="#f97316"
+     id="g140"
+     transform="matrix(1.4491525,0,0,1.3389831,-7.118644,-5.2881356)">
+    <!-- Top block -->
+    <rect
+       x="8"
+       y="8"
+       width="16"
+       height="4"
+       rx="1"
+       id="rect134" />
+    <!-- Middle block -->
+    <rect
+       x="8"
+       y="14"
+       width="12"
+       height="4"
+       rx="1"
+       id="rect136" />
+    <!-- Bottom block -->
+    <rect
+       x="8"
+       y="20"
+       width="8"
+       height="4"
+       rx="1"
+       id="rect138" />
+  </g>
+  <!-- Subtle grid pattern -->
+</svg>

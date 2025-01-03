@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="grid-gradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2563eb" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.05"/>
+    </linearGradient>
+    <!-- Grid pattern -->
+    <pattern id="grid" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#2563eb" stroke-width="0.5" stroke-opacity="0.1"/>
+    </pattern>
+  </defs>
+
+  <!-- Base background -->
+  <rect width="800" height="400" fill="url(#grid-gradient)"/>
+  <!-- Grid overlay -->
+  <rect width="800" height="400" fill="url(#grid)"/>
+
+  <!-- Main "editor" frame -->
+  <rect x="150" y="50" width="500" height="300" rx="8" fill="#ffffff" filter="drop-shadow(0 4px 6px rgba(0,0,0,0.1))"/>
+  
+  <!-- Header block -->
+  <rect x="170" y="70" width="460" height="60" rx="4" fill="#f1f5f9"/>
+  <circle cx="200" cy="100" r="15" fill="#2563eb"/>
+  <rect x="230" y="90" width="120" height="20" rx="2" fill="#1e293b"/>
+  
+  <!-- Content blocks -->
+  <rect x="170" y="150" width="200" height="180" rx="4" fill="#f1f5f9"/>
+  <rect x="390" y="150" width="240" height="80" rx="4" fill="#f1f5f9"/>
+  <rect x="390" y="250" width="240" height="80" rx="4" fill="#f1f5f9"/>
+  
+  <!-- Decorative elements -->
+  <circle cx="190" cy="170" r="8" fill="#2563eb"/>
+  <circle cx="410" cy="170" r="8" fill="#3b82f6"/>
+  <circle cx="410" cy="270" r="8" fill="#2563eb"/>
+  
+  <!-- "Block" indicators -->
+  <rect x="210" y="165" width="140" height="10" rx="2" fill="#1e293b" fill-opacity="0.3"/>
+  <rect x="430" y="165" width="180" height="10" rx="2" fill="#1e293b" fill-opacity="0.3"/>
+  <rect x="430" y="265" width="180" height="10" rx="2" fill="#1e293b" fill-opacity="0.3"/>
+  
+  <!-- Floating blocks -->
+  <g transform="translate(50,150) rotate(-15)">
+    <rect width="60" height="60" rx="4" fill="#2563eb" fill-opacity="0.9"/>
+  </g>
+  <g transform="translate(680,100) rotate(15)">
+    <rect width="40" height="40" rx="4" fill="#3b82f6" fill-opacity="0.9"/>
+  </g>
+  <g transform="translate(700,250) rotate(-10)">
+    <rect width="50" height="50" rx="4" fill="#2563eb" fill-opacity="0.8"/>
+  </g>
+</svg>
