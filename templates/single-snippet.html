@@ -1,0 +1,25 @@
+<!-- wp:template-part {"slug":"header","theme":"fsetips-theme","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main","align":"wide","style":{"spacing":{"margin":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40"}}},"layout":{"type":"constrained"}} -->
+<main class="wp-block-group alignwide"
+    style="margin-top:var(--wp--preset--spacing--40);margin-bottom:var(--wp--preset--spacing--40)">
+    <!-- wp:group {"align":"wide","className":"snippet-header","layout":{"type":"constrained","justifyContent":"left"}} -->
+    <div class="wp-block-group alignwide snippet-header">
+        <!-- wp:post-terms {"term":"difficulty","className":"snippet-difficulty"} /-->
+
+        <!-- wp:post-title {"textAlign":"left","level":1,"style":{"spacing":{"margin":{"bottom":"var:preset|spacing|30"}}}} /-->
+
+        <!-- wp:group {"className":"snippet-meta","style":{"spacing":{"blockGap":"0.5rem"}},"layout":{"type":"flex","flexWrap":"wrap"}} -->
+        <div class="wp-block-group snippet-meta">
+            <!-- wp:post-terms {"term":"snippet-type","className":"taxonomy-snippet-type","separator":""} /-->
+            <!-- wp:post-terms {"term":"fse-topic","className":"taxonomy-fse-topic","separator":""} /-->
+        </div>
+        <!-- /wp:group -->
+    </div>
+    <!-- /wp:group -->
+
+    <!-- wp:post-content {"align":"wide","layout":{"type":"constrained"}} /-->
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","theme":"fsetips-theme","tagName":"footer"} /-->

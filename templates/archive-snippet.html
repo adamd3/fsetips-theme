@@ -1,0 +1,48 @@
+<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main","align":"wide","style":{"spacing":{"margin":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40"}}},"layout":{"type":"constrained"}} -->
+<main class="wp-block-group alignwide"
+    style="margin-top:var(--wp--preset--spacing--40);margin-bottom:var(--wp--preset--spacing--40)">
+    <!-- wp:group {"className":"archive-filters","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"flex-start"}} -->
+    <div class="wp-block-group archive-filters">
+        <!-- wp:terms {"term":"difficulty"} /-->
+        <!-- wp:terms {"term":"fse-topic"} /-->
+        <!-- wp:terms {"term":"snippet-type"} /-->
+    </div>
+    <!-- /wp:group -->
+
+    <!-- wp:query {"queryId":0,"query":{"perPage":10,"postType":"snippet","order":"desc","orderBy":"date"}} -->
+    <div class="wp-block-query">
+        <!-- wp:post-template {"layout":{"type":"grid","columnCount":2}} -->
+        <!-- wp:group {"className":"archive-card","layout":{"type":"constrained"}} -->
+        <div class="wp-block-group archive-card">
+            <!-- wp:post-featured-image {"isLink":true,"height":"300px","className":"archive-card-image"} /-->
+
+            <!-- wp:group {"className":"archive-card-content","layout":{"type":"constrained"}} -->
+            <div class="wp-block-group archive-card-content">
+                <!-- wp:post-terms {"term":"difficulty","className":"archive-card-difficulty"} /-->
+                <!-- wp:post-title {"isLink":true,"fontSize":"xl"} /-->
+                <!-- wp:post-excerpt {"moreText":"View Snippet","fontSize":"small"} /-->
+                <!-- wp:group {"className":"archive-card-taxonomies","layout":{"type":"flex","flexWrap":"wrap","justifyContent":"flex-start"}} -->
+                <div class="wp-block-group archive-card-taxonomies">
+                    <!-- wp:post-terms {"term":"snippet-type","className":"taxonomy-snippet-type"} /-->
+                    <!-- wp:post-terms {"term":"fse-topic","className":"taxonomy-fse-topic"} /-->
+                </div>
+                <!-- /wp:group -->
+            </div>
+            <!-- /wp:group -->
+        </div>
+        <!-- /wp:group -->
+        <!-- /wp:post-template -->
+
+        <!-- wp:query-pagination {"layout":{"type":"flex","justifyContent":"center"}} -->
+        <!-- wp:query-pagination-previous /-->
+        <!-- wp:query-pagination-numbers /-->
+        <!-- wp:query-pagination-next /-->
+        <!-- /wp:query-pagination -->
+    </div>
+    <!-- /wp:query -->
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->

@@ -1,0 +1,72 @@
+<!-- wp:template-part {"slug":"header","theme":"fsetips-theme","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main","align":"wide","style":{"spacing":{"margin":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40"}}},"layout":{"type":"constrained"}} -->
+<main class="wp-block-group alignwide"
+    style="margin-top:var(--wp--preset--spacing--40);margin-bottom:var(--wp--preset--spacing--40)">
+    <!-- wp:group {"align":"wide","className":"tutorial-header","layout":{"type":"constrained","justifyContent":"left"}} -->
+    <div class="wp-block-group alignwide tutorial-header">
+        <!-- wp:post-terms {"term":"difficulty","className":"tutorial-difficulty"} /-->
+
+        <!-- wp:post-title {"level":1,"align":"wide","style":{"spacing":{"margin":{"bottom":"var:preset|spacing|30"}}}} /-->
+
+        <!-- wp:group {"className":"tutorial-meta","style":{"spacing":{"blockGap":"var:preset|spacing|30","margin":{"top":"0px","bottom":"0px"}}},"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"left","verticalAlignment":"center"}} -->
+        <div class="wp-block-group tutorial-meta" style="margin-top:0px;margin-bottom:0px"><!-- wp:post-date /-->
+
+            <!-- wp:post-terms {"term":"fse-topic"} /-->
+        </div>
+        <!-- /wp:group -->
+    </div>
+    <!-- /wp:group -->
+
+    <!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"2rem","left":"2rem"},"margin":{"top":"var:preset|spacing|40"}}}} -->
+    <div class="wp-block-columns alignwide" style="margin-top:var(--wp--preset--spacing--40)">
+        <!-- wp:column {"width":"75%"} -->
+        <div class="wp-block-column" style="flex-basis:75%">
+            <!-- wp:post-featured-image {"className":"featured-image-tutorial"} /-->
+
+            <!-- wp:group {"className":"tutorial-content","layout":{"type":"constrained"}} -->
+            <div class="wp-block-group tutorial-content"><!-- wp:post-content {"layout":{"type":"constrained"}} /-->
+            </div>
+            <!-- /wp:group -->
+        </div>
+        <!-- /wp:column -->
+
+        <!-- wp:column {"width":"25%"} -->
+        <div class="wp-block-column" style="flex-basis:25%">
+            <!-- wp:group {"className":"newsletter-sidebar","style":{"spacing":{"padding":{"all":"var:preset|spacing|30"}},"border":{"radius":"0.5rem"}}} -->
+            <div class="wp-block-group newsletter-sidebar" style="border-radius:0.5rem">
+                <!-- wp:heading {"level":3,"style":{"typography":{"fontWeight":"600","fontStyle":"normal"},"spacing":{"margin":{"bottom":"var:preset|spacing|20"}}},"fontSize":"lg"} -->
+                <h3 class="wp-block-heading has-lg-font-size"
+                    style="margin-bottom:var(--wp--preset--spacing--20);font-style:normal;font-weight:600">Stay Updated
+                </h3>
+                <!-- /wp:heading -->
+
+                <!-- wp:paragraph {"style":{"typography":{"fontSize":"0.875rem"}}} -->
+                <p style="font-size:0.875rem">Get the latest FSE tips and tutorials delivered to your inbox.</p>
+                <!-- /wp:paragraph -->
+
+                <!-- wp:fsetips/newsletter-signup {"buttonText":"Subscribe","placeholderText":"Your email address","layout":"vertical"} -->
+                <div class="wp-block-fsetips-newsletter-signup">
+                    <div class="max-w-md">
+                        <form id="mailchimp-form" data-mailchimp-form="true" class="flex-col" method="post"><input
+                                type="email" name="email" placeholder="Your email address" required /><button
+                                type="submit">Subscribe</button></form>
+                    </div>
+                </div>
+                <!-- /wp:fsetips/newsletter-signup -->
+            </div>
+            <!-- /wp:group -->
+
+            <!-- wp:group {"className":"tutorial-sidebar-content","style":{"spacing":{"margin":{"top":"var:preset|spacing|40"}}}} -->
+            <div class="wp-block-group tutorial-sidebar-content" style="margin-top:var(--wp--preset--spacing--40)">
+                <!-- wp:template-part {"slug":"related-posts","theme":"fsetips-theme","className":"related-tutorials"} /-->
+            </div>
+            <!-- /wp:group -->
+        </div>
+        <!-- /wp:column -->
+    </div>
+    <!-- /wp:columns -->
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","theme":"fsetips-theme","tagName":"footer"} /-->

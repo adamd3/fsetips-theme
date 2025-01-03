@@ -1,0 +1,124 @@
+<!-- wp:template-part {"slug":"header","theme":"fsetips-theme","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main","style":{"spacing":{"margin":{"top":"0","bottom":"0"},"blockGap":"0","padding":{"top":"0","bottom":"0"}}},"layout":{"type":"default"}} -->
+<main class="wp-block-group" style="margin-top:0;margin-bottom:0;padding-top:0;padding-bottom:0">
+    <!-- wp:group {"tagName":"section","align":"full","className":"hero-section","style":{"spacing":{"padding":{"top":"var:preset|spacing|50","bottom":"var:preset|spacing|50","left":"0px","right":"0px"}}},"backgroundColor":"light","layout":{"type":"constrained","justifyContent":"center"}} -->
+    <section class="wp-block-group alignfull hero-section has-light-background-color has-background"
+        style="padding-top:var(--wp--preset--spacing--50);padding-right:0px;padding-bottom:var(--wp--preset--spacing--50);padding-left:0px">
+        <!-- wp:image {"id":500,"width":"616px","height":"auto","sizeSlug":"full","linkDestination":"none","align":"center","className":"is-style-rounded","style":{"shadow":"none"}} -->
+        <figure class="wp-block-image aligncenter size-full is-resized is-style-rounded"><img
+                src="https://fsetips.ddev.site/wp-content/uploads/2025/01/fse-tech-hero-3.svg"
+                alt="Full Site Editing WordPress" class="wp-image-500"
+                style="box-shadow:none;width:616px;height:auto" /></figure>
+        <!-- /wp:image -->
+
+        <!-- wp:heading {"textAlign":"center","level":1,"align":"wide","className":"hero-title has-background-color","style":{"typography":{"letterSpacing":"-0.5px","fontSize":"3.1rem"}},"textColor":"dark","fontFamily":"plus-jakarta"} -->
+        <h1 class="wp-block-heading alignwide has-text-align-center hero-title has-background-color has-dark-color has-text-color has-plus-jakarta-font-family"
+            style="font-size:3.1rem;letter-spacing:-0.5px"><strong>WordPress Full Site Editing Tutorials &amp;
+                Guides</strong></h1>
+        <!-- /wp:heading -->
+
+        <!-- wp:fsetips/newsletter-signup {"buttonText":"Subscribe","placeholderText":"Your email address"} -->
+        <div class="wp-block-fsetips-newsletter-signup">
+            <div class="max-w-2xl">
+                <form id="mailchimp-form" data-mailchimp-form="true" class="flex" method="post"><input type="email"
+                        name="email" placeholder="Your email address" required /><button
+                        type="submit">Subscribe</button></form>
+            </div>
+        </div>
+        <!-- /wp:fsetips/newsletter-signup -->
+    </section>
+    <!-- /wp:group -->
+
+    <!-- wp:group {"tagName":"section","align":"full","className":"featured-content","style":{"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40"},"margin":{"top":"0"}}},"backgroundColor":"light","layout":{"type":"constrained"}} -->
+    <section class="wp-block-group alignfull featured-content has-light-background-color has-background"
+        style="margin-top:0;padding-top:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40)">
+        <!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"2.5rem","left":"var:preset|spacing|40"},"margin":{"top":"0px","bottom":"0px"}}}} -->
+        <div class="wp-block-columns alignwide" style="margin-top:0px;margin-bottom:0px"><!-- wp:column -->
+            <div class="wp-block-column">
+                <!-- wp:heading {"style":{"elements":{"link":{"color":{"text":"var:preset|color|cyan-bluish-gray"}}}},"textColor":"cyan-bluish-gray","fontSize":"base","fontFamily":"plus-jakarta"} -->
+                <h2
+                    class="wp-block-heading has-cyan-bluish-gray-color has-text-color has-link-color has-plus-jakarta-font-family has-base-font-size">
+                    LATEST TUTORIALS</h2>
+                <!-- /wp:heading -->
+
+                <!-- wp:query {"queryId":0,"query":{"perPage":"3","postType":"tutorial","order":"desc","orderBy":"date"}} -->
+                <div class="wp-block-query"><!-- wp:post-template -->
+                    <!-- wp:post-title {"isLink":true,"fontSize":"lg"} /-->
+
+                    <!-- wp:post-excerpt {"moreText":"Read Tutorial →","excerptLength":20} /-->
+                    <!-- /wp:post-template -->
+                </div>
+                <!-- /wp:query -->
+            </div>
+            <!-- /wp:column -->
+
+            <!-- wp:column -->
+            <div class="wp-block-column">
+                <!-- wp:heading {"style":{"elements":{"link":{"color":{"text":"var:preset|color|cyan-bluish-gray"}}}},"textColor":"cyan-bluish-gray","fontSize":"base","fontFamily":"plus-jakarta"} -->
+                <h2
+                    class="wp-block-heading has-cyan-bluish-gray-color has-text-color has-link-color has-plus-jakarta-font-family has-base-font-size">
+                    FEATURED SNIPPETS</h2>
+                <!-- /wp:heading -->
+
+                <!-- wp:query {"queryId":1,"query":{"perPage":"4","postType":"snippet","order":"desc","orderBy":"date"}} -->
+                <div class="wp-block-query"><!-- wp:post-template -->
+                    <!-- wp:post-title {"isLink":true,"fontSize":"lg"} /-->
+
+                    <!-- wp:post-excerpt {"moreText":"View Snippet →","excerptLength":20} /-->
+                    <!-- /wp:post-template -->
+                </div>
+                <!-- /wp:query -->
+            </div>
+            <!-- /wp:column -->
+        </div>
+        <!-- /wp:columns -->
+    </section>
+    <!-- /wp:group -->
+
+    <!-- wp:group {"tagName":"section","align":"full","className":"about-section","style":{"spacing":{"padding":{"top":"var:preset|spacing|50","bottom":"var:preset|spacing|50"}}},"backgroundColor":"primary","layout":{"type":"constrained"}} -->
+    <section class="wp-block-group alignfull about-section has-primary-background-color has-background"
+        style="padding-top:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50)">
+        <!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|40","left":"var:preset|spacing|40"}}}} -->
+        <div class="wp-block-columns alignwide"><!-- wp:column -->
+            <div class="wp-block-column">
+                <!-- wp:heading {"level":1,"style":{"spacing":{"margin":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30"}},"elements":{"link":{"color":{"text":"var:preset|color|light"}}}},"textColor":"light","fontSize":"xl","fontFamily":"plus-jakarta"} -->
+                <h1 class="wp-block-heading has-light-color has-text-color has-link-color has-plus-jakarta-font-family has-xl-font-size"
+                    style="margin-top:var(--wp--preset--spacing--30);margin-bottom:var(--wp--preset--spacing--30)">
+                    <strong>What is Full Site Editing?</strong>
+                </h1>
+                <!-- /wp:heading -->
+
+                <!-- wp:paragraph {"style":{"spacing":{"padding":{"top":"0","bottom":"0"}},"elements":{"link":{"color":{"text":"var:preset|color|light"}}}},"textColor":"light","fontFamily":"roboto"} -->
+                <p class="has-light-color has-text-color has-link-color has-roboto-font-family"
+                    style="padding-top:0;padding-bottom:0">Full Site Editing (FSE) represents a fundamental shift in how
+                    WordPress websites are built and customized. It brings the block editor's flexibility to every part
+                    of your site.</p>
+                <!-- /wp:paragraph -->
+
+                <!-- wp:paragraph {"style":{"spacing":{"padding":{"top":"0","bottom":"0"}},"elements":{"link":{"color":{"text":"var:preset|color|light"}}}},"textColor":"light","fontFamily":"roboto"} -->
+                <p class="has-light-color has-text-color has-link-color has-roboto-font-family"
+                    style="padding-top:0;padding-bottom:0">With FSE, you can visually design your entire website - from
+                    headers to footers, and everything in between - using a consistent block-based interface.</p>
+                <!-- /wp:paragraph -->
+            </div>
+            <!-- /wp:column -->
+
+            <!-- wp:column -->
+            <div class="wp-block-column">
+                <!-- wp:image {"id":150,"width":"449px","height":"auto","sizeSlug":"full","linkDestination":"none","className":"is-style-default","style":{"color":{"duotone":"unset"},"shadow":"var:preset|shadow|natural"}} -->
+                <figure class="wp-block-image size-full is-resized is-style-default"><img
+                        src="https://fsetips.ddev.site/wp-content/uploads/2024/12/fse-explainer-1.svg"
+                        alt="Full Site Editing WordPress" class="wp-image-150"
+                        style="box-shadow:var(--wp--preset--shadow--natural);width:449px;height:auto" /></figure>
+                <!-- /wp:image -->
+            </div>
+            <!-- /wp:column -->
+        </div>
+        <!-- /wp:columns -->
+    </section>
+    <!-- /wp:group -->
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","theme":"fsetips-theme","tagName":"footer"} /-->
