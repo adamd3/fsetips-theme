@@ -60,3 +60,16 @@ vendor/
 # Environment files
 .env
 .env.*
+!.env.example
+
+# Build files
+/build/*
+!/build/.gitkeep
+
+# Log files
+*.log
+npm-debug.log*
+
+# Temporary files
+.tmp
+.temp
